@@ -1,53 +1,110 @@
-import "./css/interview_pre.css";
-import React from "react";
-import Data from "../data/arr.json";
+import React from 'react';
+import axios from 'axios';
 import Navbar from "./routes/Navbar";
-
-const interview_pre = () => {
-  const DisplayData = Data.map((problem) => {
-    return (
-      <tr style={{backgroundColor:"#fbe6fc"}}>
-        <td style={{borderRight:"1px solid black"}}>{problem.number})</td>
-        {/* <td>{problem.topic}</td> */}
-        <td style={{borderRight:"1px solid black"}}>{problem.name}</td>
-        <td>
-          <a href={problem.link} target="_blank" style={{fontSize:"10px",backgroundColor:"#98ff8c", textDecoration:"none",height:"30px", width:"60px",fontSize:"large",border:"2px solid black",textAlign:"center",borderRadius:"25px"}}>
-            Solve
-            {/* <button style={{fontSize:"10px",backgroundColor:"#98ff8c"}}>
-            solve
-            </button> */}
-          </a>
-        </td>
-      </tr>
-    );
-  });
-  const mystyle={
-    width:"80vw",
-    border:"2px solid black",
-    margin:"auto",
-    fontSize:"large",
-    backgroundColor:"#f9b5ff",
-    marginTop:"20px",
-    marginBottom:"30px"
+const reactData = [{name:' Tom',password:'test123'}];
+class MyForm extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { name: '',password: '',};
   }
-  return (
-    <div>
-      <Navbar></Navbar>
-      <br></br>
-      <h2 style={{fontSize:"xx-large",textAlign:"center"}}>Arrays</h2>
-      <table class="table table-striped" style={mystyle}>
-        <thead>
-          <tr>
-            <th style={{borderRight:"1px solid black"}}>Sr.NO</th>
-            {/* <th>Topic</th> */}
-            <th style={{borderRight:"1px solid black"}}>Name</th>
-            <th>Link</th>
-          </tr>
-        </thead>
-        <tbody>{DisplayData}</tbody>
-      </table>
-    </div>
-  );
-};
 
-export default interview_pre;
+  handleChange = (event) => {
+    this.setState({[event.target.name]: event.target.value});
+  };
+ 
+  handleSubmit = (event) => {
+    event.preventDefault();
+    //alert('A form was submitted: ' + this.state);
+    const { name, password } = this.state;
+
+    const book = {
+      name,
+      password
+    };
+     console.log(book);
+    // axios.get('http://localhost:5000/api/users/')
+    // .then(res => {
+    //   console.log(res.data);
+    //   for(var user of res.data)
+    //   {
+    //     if(book.name == user.name && (book.password==user.password)){
+    //     localStorage.setItem('curruser', user.name);
+    //     let cnf = window.confirm("login success");
+    //     if(cnf)
+    //     {
+    //       window.location.href='http://localhost:3000/home';
+    //     }
+    //     }
+    
+    //   }
+    // })
+    //   .catch(err => {
+    //     console.error(err);
+    //   });
+};
+ 
+  render() {
+    const mystyle = {
+      backgroundColor:"#e6fffd",
+      width:"40vw",
+      height:"55vh",
+      margin:"auto",
+      marginTop:"20px",
+      marginBottom:"30px",
+      border:"1px solid black",
+      borderRadius:"10px"
+    }
+    const mystyle2 = {
+      width: "80px",
+      backgroundColor: "#ff80b3",
+      padding: "0px",
+      fontFamily: "Arial",
+      fontSize: "18px",
+      marginLeft: "15vw",
+      marginBottom: "15px",
+      marginTop: "15px",
+      height: "30px",
+      fontWeight: 'bold'
+    };
+    return (
+      <>
+      <Navbar></Navbar>
+      <div style = {mystyle}>
+      <form onSubmit={this.handleSubmit} >
+        <h1 style={{fontSize:"x-large",fontWeight:"bold",textAlign:"center"}}>Fill your details to start hiring</h1>
+        <hr></hr>
+        
+          <h3 style={{display:"inline",marginLeft:"10px",marginRight:"50px"}}>First Name:</h3>
+          <input type="text" style={{fontSize:"large",fontWeight:"bold",textAlign:"center"}} value={this.state.value} name="firstname" onChange={this.handleChange} />
+          <br></br>
+          <br></br>
+          <h3 style={{display:"inline",marginLeft:"10px",marginRight:"20px"}}>Last Name:</h3>
+          <input type="text" style={{fontSize:"large",fontWeight:"bold",textAlign:"center"}} value={this.state.value} name="lastname" onChange={this.handleChange} />
+          <br></br>
+          <br></br>
+          <h3 style={{display:"inline",marginLeft:"10px",marginRight:"20px"}}>Gender:</h3>
+          <input type="text" style={{fontSize:"large",fontWeight:"bold",textAlign:"center"}} value={this.state.value} name="gender" onChange={this.handleChange} />
+          <br></br>
+          <br></br>
+          <h3 style={{display:"inline",marginLeft:"10px",marginRight:"20px"}}>Industry:</h3>
+          <input type="text" style={{fontSize:"large",fontWeight:"bold",textAlign:"center"}} value={this.state.value} name="industry" onChange={this.handleChange} />
+          <br></br>
+          <br></br>
+          <h3 style={{display:"inline",marginLeft:"10px",marginRight:"20px"}}>Location:</h3>
+          <input type="text" style={{fontSize:"large",fontWeight:"bold",textAlign:"center"}} value={this.state.value} name="location" onChange={this.handleChange} />
+        
+        <br></br>
+        <br></br>
+        <input type="submit" style={mystyle2} value="Submit" />
+        <div style={{marginLeft:"7vw",fontSize:"medium"}}>
+        Facing trouble submitting? Check back after few minutes
+        </div>
+        
+      </form>
+      </div>
+      </>
+    );
+  }
+}
+ 
+export default MyForm;

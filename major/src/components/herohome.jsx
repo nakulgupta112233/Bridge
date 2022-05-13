@@ -10,6 +10,7 @@ import pratham from "./images/pratham.jpg";
 import nakul from "./images/nakul.jpg";
 import keshav from "./images/keshav.jpeg";
 import Navbar2 from "./routes/Navbar2";
+import people from "./images/people.png";
 
 const HeroSection = () => {
   return (
@@ -19,10 +20,10 @@ const HeroSection = () => {
       <div className="header-hero">
         <div className="container" style={{marginTop:"0px"}}>
           <img
-            src={Logo}
+            src={people}
             alt="Logo"
             style={{
-              maxHeight: "300px",
+              maxHeight: "350px",
               float: "right",
               marginRight: "0px",
               marginTop: "15vh",
@@ -37,16 +38,16 @@ const HeroSection = () => {
               >
                 <p
                   className="text"
-                  style={{ color: "#2977C9", fontSize: "20px" }}
+                  style={{ color: "#15ba06", fontSize: "20px" }}
                 >
-                  Your one stop to{" "}
+                  YOUR ONE STOP DESTINATION FOR JOB SEARCH {" "}
                 </p>
                 <h3 className="header-title">
                   {/* CODE . COLLABORATE . CREATE */}
                   <Typewriter
                     className="header-title"
                     options={{
-                      strings: ["CODE", "COLLABORATE", "CREATE"],
+                      strings: ["SEARCH", "APPLY", "GET INTERVIEWED"],
                       delay: 30,
                       deleteSpeed: 20,
                       autoStart: true,
@@ -55,15 +56,23 @@ const HeroSection = () => {
                     }}
                   />
                 </h3>
-                <p className="text" style={{ color: "#0400CB" }}>
-                  Create a room, invite your friends, and race to finish the
-                  problems.
+                <p
+                  className="text"
+                  style={{ color: "#15ba06", fontSize: "30px" }}
+                >
+                  Job Search was never so easy ! {" "}
+                </p>
+                
+                <p className="text" style={{ color: "#15ba06" }}>
+                Showcase skills to employers<br></br>Get hired with reputed recruiters <br></br>
+
+Choose full time or contract basis<br></br> work , whichever suits you
                 </p>
                 <br />
                 <br />
                 <a href="/login">
                 <button
-                  className="btnn btn-primary round text-white pl-5 pr-5 pb-4 pt-4 mt-3"
+                  className="btnn btn-success round text-white pl-5 pr-5 pb-4 pt-4 mt-3"
                   data-toggle="modal"
                   data-target="#exampleModal"
                   data-whatever="@getbootstrap"
@@ -78,32 +87,7 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-      {/* features start */}
-
-      <div className="header-hero">
-        <div className="container">
-          <div className="col" style={{ textAlign: "center" }}>
-            <div style={{ marginBottom: "70px" }}>
-              <h2 class="HowItWorks_header__394j-">Features</h2>
-            </div>
-          </div>
-          <div className="row justify-content-left">
-            <div className="col-xl-12 col-lg-12">
-              <div className="row align-items-center">
-                <div className="col" style={{ textAlign: "center" }}>
-                  <img src={wandf} alt="" style={{ maxHeight: "225px" }} />
-                </div>
-                <div className="col" style={{ textAlign: "center" }}>
-                  <img src={pracf} alt="" style={{ maxHeight: "225px" }} />
-                </div>
-                <div className="col" style={{ textAlign: "center" }}>
-                  <img src={ipf} alt="" style={{ maxHeight: "225px" }} />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+     
 
       {/* How it works section */}
       <section class="HowItWorks_landing-how-it-works__eeM1y">
@@ -112,31 +96,29 @@ const HeroSection = () => {
           <div class="HowItWorks_step__WR9Lu">
             <div class="HowItWorks_title__2mQLn">
               <span class="HowItWorks_number__2XBD7">1</span>
-              <h3>Join a room</h3>
+              <h3>Best candidates reach out to you directly</h3>
             </div>
             <p>
-              Join or create a room, invite your friends, and get ready to start
-              solving problems together.
+              candidates searching for the skill specific job will reach the recruiter by applying for the job
             </p>
           </div>
           <div class="HowItWorks_step__WR9Lu">
             <div class="HowItWorks_title__2mQLn">
               <span class="HowItWorks_number__2XBD7">2</span>
-              <h3>Wait for the host to start</h3>
+              <h3>Verify skills and then hire</h3>
             </div>
             <p>
-              Once the host starts the room, you'll all get the same coding
-              question to solve. Only you can see your editor.
+              Once the candidate applies for the job verify his/her skills and decide whether his profile matches job requirements 
             </p>
           </div>
           <div class="HowItWorks_step__WR9Lu">
             <div class="HowItWorks_title__2mQLn">
               <span class="HowItWorks_number__2XBD7">3</span>
-              <h3 style={{ color: "#0A66C2" }}>
-                Solve the problem with others
+              <h3 style={{ color: "#15ba06" }}>
+              Start an interview in the app itself !
               </h3>
             </div>
-            <p>Feel free to compete or chat to solve questions together :)</p>
+            <p> schedule an online 1:1 interview on bridge and interact with candidate to verify his/her skillset</p>
           </div>
         </div>
       </section>
