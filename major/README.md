@@ -1,10 +1,11 @@
-# CODESCRIPT
+# BRIDGE
 
 ## Features 
 
-Interview Prep
-Smart Practice
-Video Chat
+
+Easy job search
+Blue collar workers friendly
+Interview Video Chat
 Discuss Blogging
 
 
@@ -12,7 +13,7 @@ Discuss Blogging
 ## How It Works
 1
 Join a room
-Join or create a room, invite your friends, and get ready to start solving problems together.
+Join or create a room, invite your friends, and get ready to start solving interview problems.
 
 2
 Wait for the host to start
