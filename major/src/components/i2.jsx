@@ -22,25 +22,25 @@ class MyForm extends React.Component {
       password
     };
      console.log(book);
-    axios.get('http://localhost:5000/api/users/')
-    .then(res => {
-      console.log(res.data);
-      for(var user of res.data)
-      {
-        if(book.name == user.name && (book.password==user.password)){
-        localStorage.setItem('curruser', user.name);
-        let cnf = window.confirm("login success");
-        if(cnf)
-        {
-          window.location.href='http://localhost:3000/home';
-        }
-        }
+    // axios.get('http://localhost:5000/api/users/')
+    // .then(res => {
+    //   console.log(res.data);
+    //   for(var user of res.data)
+    //   {
+    //     if(book.name == user.name && (book.password==user.password)){
+    //     localStorage.setItem('curruser', user.name);
+    //     let cnf = window.confirm("login success");
+    //     if(cnf)
+    //     {
+    //       window.location.href='http://localhost:3000/home';
+    //     }
+    //     }
     
-      }
-    })
-      .catch(err => {
-        console.error(err);
-      });
+    //   }
+    // })
+    //   .catch(err => {
+    //     console.error(err);
+    //   });
 };
  
   render() {

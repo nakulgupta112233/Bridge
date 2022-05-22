@@ -74,6 +74,7 @@ const Blog = db.define('blogs3', {
     allowNull: true
   }
 })
+
 db.sync()
 .then(()=> console.log("database synced"))
 .catch((err)=> console.log('error syncing database'))

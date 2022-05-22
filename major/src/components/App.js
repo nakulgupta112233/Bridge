@@ -30,6 +30,7 @@ import Home from "./herohome2";
 import Navbar from "./routes/Navbar";
 import Footer from "./routes/Footer";
 import NotFoundPage from './NotFoundPage.jsx';
+import Main from './dashboardsMain.jsx';
 
 class App extends Component  {
   state = {
@@ -82,6 +83,7 @@ class App extends Component  {
         <Route path="/smartpractice" exact component={Smart_practice} />
         <Route path="/" exact component={HeroSection} />
         <Route path="/home" exact component={Home} />
+        <Route path="/dashboards" exact component={Main} />
         <Route component={NotFoundPage} />
         </Switch>
       </Router>
